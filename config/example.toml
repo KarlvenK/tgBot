@@ -1,0 +1,5 @@
+[telegram]
+token = "your telegram bot token"
+
+[common]
+logPath = "./log/"
