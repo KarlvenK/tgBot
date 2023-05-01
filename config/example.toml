@@ -1,5 +1,6 @@
 [telegram]
 token = "your telegram bot token"
+debugMode = true
 
 [common]
 logPath = "./log/"

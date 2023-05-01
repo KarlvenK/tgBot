@@ -18,7 +18,8 @@ type Config struct {
 }
 
 type TgCfg struct {
-	Token string
+	Token     string
+	DebugMode bool
 }
 
 type CommonCfg struct {
@@ -35,6 +36,7 @@ func init() {
 	}
 	cfg.Token = viper.GetString("telegram.token")
 	cfg.LogPath = viper.GetString("common.logPath")
+	cfg.DebugMode = viper.GetBool("telegram.debugMode")
 }
 
 // GetConfig

@@ -17,7 +17,7 @@ var (
 
 func init() {
 	core := zapcore.NewCore(getEncoder(), getLogWriter(), zapcore.InfoLevel)
-	tmpLogger := zap.New(core, zap.AddCaller())
+	tmpLogger := zap.New(core, zap.AddCaller(), zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.WarnLevel))
 	logger = tmpLogger.Sugar()
 }
 
